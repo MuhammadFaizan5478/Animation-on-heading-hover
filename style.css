@@ -1,0 +1,53 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body, html{
+    width:100%;
+    height:100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    font-size: 120px;
+    line-height: 0.9;
+    position: relative;
+}
+
+h2::after{
+    content: "";
+    width:100%;
+    height:10px;
+    background-color: black;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+h2:hover::after{
+    animation-name:headanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    opacity: 1;
+}
+@keyframes headanimation {
+
+    0%{
+        width:0%;
+        left:0;
+    }
+    50%{
+        width:100%;
+        left:0;
+    }
+    100%{
+        width:0;
+        left:100%;
+    }
+}
